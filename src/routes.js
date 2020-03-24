@@ -1,9 +1,10 @@
 import { Router } from 'express';
 
+import Ongs from './controllers/Ongs';
+
 const routes = Router();
 
-routes.post('/users', (req, res) => {
-  return res.json('ok');
-});
+routes.get('/ongs', Ongs.index);
+routes.post('/ongs', Ongs.store);
 
 export default routes;
