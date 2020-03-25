@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 import connection from '../database/connection';
 
-class Ongs {
+class OngController {
   async index(req, res) {
     const ongs = await connection('ongs').select('*');
 
@@ -26,4 +26,4 @@ class Ongs {
   }
 }
 
-export default new Ongs();
+export default new OngController();
