@@ -9,7 +9,7 @@ class OngController {
   }
 
   async store(req, res) {
-    const { name, email, whatsapp, city, county } = req.body;
+    const { name, email, whatsapp, city, country } = req.body;
 
     const id = crypto.randomBytes(4).toString('HEX');
 
@@ -19,7 +19,7 @@ class OngController {
       email,
       whatsapp,
       city,
-      county,
+      country,
     });
 
     return res.json({ id });
