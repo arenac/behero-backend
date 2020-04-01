@@ -5,6 +5,7 @@ import cors from 'cors';
 import Youch from 'youch';
 import { Server } from 'http';
 import 'express-async-errors';
+import { errors } from 'celebrate';
 import routes from './routes';
 
 class App {
@@ -30,6 +31,7 @@ class App {
   exceptionHandler() {
     // when express receives a middleware with four parameters, this means for it
     // a middleware to treat exeption
+    this.app.use(errors());
     this.app.use(async (err, req, res, next) => {
       if (process.env.NODE_ENV === 'development') {
         const errors = await new Youch(err, req).toJSON();
