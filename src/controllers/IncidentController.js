@@ -16,7 +16,7 @@ class IncidentController {
         'ongs.email',
         'ongs.whatsapp',
         'ongs.city',
-        'ongs.county',
+        'ongs.country',
       ]);
 
     res.header('X-Total-Count', count['count(*)']);
