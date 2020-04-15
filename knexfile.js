@@ -1,5 +1,9 @@
 // Update with your config settings.
+/*
+yarn run knex migrate:make
+yarn run knex migrate:latest
 
+*/
 module.exports = {
   development: {
     client: 'sqlite3',
